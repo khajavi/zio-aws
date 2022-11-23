@@ -1050,6 +1050,6 @@ jobs:
         node-version: '16.x'
         registry-url: 'https://registry.npmjs.org'
     - name: Publishing Docs to NPM Registry
-      run: sbt -J-XX:+UseG1GC -J-Xmx4g -J-Xms4g -J-Xss16m ++2.13.8 generateArtifactList publishToNpm
+      run: sbt -J-XX:+UseG1GC -J-Xmx4g -J-Xms4g -J-Xss16m ++2.13.8 generateArtifactList docs/publishHashverToNpm
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
