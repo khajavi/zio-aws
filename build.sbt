@@ -16,7 +16,7 @@ Global / pgpPassphrase := sys.env.get("PGP_PASSPHRASE").map(_.toCharArray())
 
 lazy val root = Project("zio-aws", file(".")).settings(
   publishArtifact := false
-) aggregate (core, http4s, netty, akkahttp, docs)
+) aggregate (core, http4s, netty, akkahttp)
 
 lazy val core = Project("zio-aws-core", file("zio-aws-core"))
   .settings(
